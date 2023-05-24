@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://c12d5yj3mw5du"]
+[gd_scene load_steps=10 format=3 uid="uid://c12d5yj3mw5du"]
 
 [ext_resource type="PackedScene" uid="uid://b3d42ejrkdxdd" path="res://Scenes/ground_s.tscn" id="1_nhvby"]
 [ext_resource type="PackedScene" uid="uid://c68xy7romebr8" path="res://Scenes/wall.tscn" id="2_i2bc4"]
 [ext_resource type="PackedScene" uid="uid://blmw7n3obfy56" path="res://Scenes/wall_s_next.tscn" id="3_502wr"]
 [ext_resource type="PackedScene" uid="uid://bpshfgwic3nm4" path="res://Scenes/player.tscn" id="4_4nveo"]
 [ext_resource type="PackedScene" uid="uid://cjio56703dal1" path="res://Scenes/roof.tscn" id="5_xmst4"]
+[ext_resource type="PackedScene" uid="uid://8cqxk2nyxlcs" path="res://Scenes/light.tscn" id="6_lomaa"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_nraaa"]
 sky_top_color = Color(0.027451, 0.607843, 0.882353, 1)
@@ -44,3 +45,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.12094, 1.43338, -2.78607)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_j8ngf")
+
+[node name="Light" parent="." instance=ExtResource("6_lomaa")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.232579, 11.8639, 0.0558943)
