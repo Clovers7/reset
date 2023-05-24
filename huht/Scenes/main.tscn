@@ -20,31 +20,27 @@ ambient_light_source = 3
 
 [node name="Main" type="Node"]
 
-[node name="Ground_S" parent="." instance=ExtResource("1_nhvby")]
+[node name="Walls ETC" type="Node" parent="."]
 
-[node name="Wall_S" parent="." instance=ExtResource("2_i2bc4")]
+[node name="Ground_S" parent="Walls ETC" instance=ExtResource("1_nhvby")]
+
+[node name="Wall_S" parent="Walls ETC" instance=ExtResource("2_i2bc4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.03109, 5.93741, 0)
 
-[node name="Wall_S2" parent="." instance=ExtResource("2_i2bc4")]
+[node name="Wall_S2" parent="Walls ETC" instance=ExtResource("2_i2bc4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.90224, 5.93741, 0)
 
-[node name="Wall_S3" parent="." instance=ExtResource("2_i2bc4")]
+[node name="Wall_S3" parent="Walls ETC" instance=ExtResource("2_i2bc4")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 5.937, -5)
 
-[node name="Wall_S_Next" parent="." instance=ExtResource("3_502wr")]
+[node name="Wall_S_Next" parent="Walls ETC" instance=ExtResource("3_502wr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0503149, 5.96759, 4.94322)
+
+[node name="Roof" parent="Walls ETC" instance=ExtResource("5_xmst4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0616983, 11.923, -0.0192384)
 
 [node name="Player" parent="." instance=ExtResource("4_4nveo")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.12094, 1.43338, -2.78607)
-
-[node name="Roof" parent="." instance=ExtResource("5_xmst4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0616983, 11.923, -0.0192384)
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -0.707107, 0.707107, 0, -0.707107, -0.707107, 0, 19.0437, -3.53447)
-light_energy = 1.646
-directional_shadow_split_1 = 0.191
-directional_shadow_max_distance = 143.9
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_j8ngf")
