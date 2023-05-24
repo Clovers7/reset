@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=3 uid="uid://jn52fxxlew0y"]
+
+[ext_resource type="Texture2D" uid="uid://hgc41jsq832j" path="res://Images/Exit_S.png" id="1_jxsdu"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_wn0vt"]
+size = Vector3(2.3, 4, 0.2)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_efbur"]
+albedo_color = Color(0.537255, 0.537255, 0.537255, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gx4o7"]
+albedo_color = Color(0.537255, 0.537255, 0.537255, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_pc455"]
+material = SubResource("StandardMaterial3D_gx4o7")
+size = Vector3(2.3, 0.17, 0.2)
+
+[node name="Door" type="Node3D"]
+
+[node name="Door" type="CSGMesh3D" parent="."]
+use_collision = true
+mesh = SubResource("BoxMesh_wn0vt")
+material = SubResource("StandardMaterial3D_efbur")
+
+[node name="CSGMesh3D" type="CSGMesh3D" parent="Door"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.395194, -0.172775)
+mesh = SubResource("BoxMesh_pc455")
+
+[node name="Exit" type="Sprite3D" parent="."]
+transform = Transform3D(-0.7, 0, -6.11959e-08, 0, 0.7, 0, 6.11959e-08, 0, -0.7, 0, 1.1915, -0.100554)
+texture = ExtResource("1_jxsdu")

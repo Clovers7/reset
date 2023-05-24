@@ -7,6 +7,6 @@ use_collision = true
 size = Vector3(10, 12, 0.1)
 
 [node name="Hole" type="CSGBox3D" parent="Wall"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4.82366, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4.0197, 0)
 operation = 2
-size = Vector3(2.28892, 4.62066, 1)
+size = Vector3(2.28892, 3.94963, 0.198821)
