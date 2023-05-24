@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://cjio56703dal1"]
+
+[node name="Roof" type="Node3D"]
+
+[node name="Roof" type="CSGBox3D" parent="."]
+use_collision = true
+size = Vector3(11, 0.1, 11)
+
+[node name="Hole" type="CSGBox3D" parent="Roof"]
+operation = 2
+size = Vector3(7.71199, 0.290194, 6.98307)

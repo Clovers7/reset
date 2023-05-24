@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://blmw7n3obfy56"]
+
+[node name="Wall_S_Next" type="Node3D"]
+
+[node name="Wall" type="CSGBox3D" parent="."]
+use_collision = true
+size = Vector3(10, 12, 0.1)
+
+[node name="Hole" type="CSGBox3D" parent="Wall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4.82366, 0)
+operation = 2
+size = Vector3(2.28892, 4.62066, 1)

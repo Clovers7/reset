@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://c68xy7romebr8"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xes8g"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_xydti"]
+material = SubResource("StandardMaterial3D_xes8g")
+size = Vector3(0.1, 12, 10)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fasib"]
+size = Vector3(0.228661, 12.0576, 10.0449)
+
+[node name="Wall_S" type="StaticBody3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_xydti")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_fasib")
