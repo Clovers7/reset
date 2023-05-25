@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://c12d5yj3mw5du"]
+[gd_scene load_steps=12 format=3 uid="uid://c12d5yj3mw5du"]
 
 [ext_resource type="PackedScene" uid="uid://b3d42ejrkdxdd" path="res://Scenes/ground_s.tscn" id="1_nhvby"]
 [ext_resource type="PackedScene" uid="uid://c68xy7romebr8" path="res://Scenes/wall.tscn" id="2_i2bc4"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://jn52fxxlew0y" path="res://Scenes/door.tscn" id="5_aaqjj"]
 [ext_resource type="PackedScene" uid="uid://cjio56703dal1" path="res://Scenes/roof.tscn" id="5_xmst4"]
 [ext_resource type="PackedScene" uid="uid://8cqxk2nyxlcs" path="res://Scenes/light.tscn" id="6_lomaa"]
+[ext_resource type="PackedScene" uid="uid://c6m7nqefuxmtb" path="res://Scenes/l_1_ground.tscn" id="8_q11rl"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_nraaa"]
 sky_top_color = Color(0.027451, 0.607843, 0.882353, 1)
@@ -36,13 +37,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.90224, 5.93741, 0)
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 5.937, -5)
 
 [node name="Wall_S_Next" parent="Walls ETC" instance=ExtResource("3_502wr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0503149, 5.96759, 4.94322)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0503149, 5.90707, 4.87821)
 
 [node name="Roof" parent="Walls ETC" instance=ExtResource("5_xmst4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0616983, 11.923, -0.0192384)
 
 [node name="Door" parent="Walls ETC" instance=ExtResource("5_aaqjj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00287604, 3.68561, 4.40939)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0676612, 4.89299, 4.59419)
 
 [node name="Player" parent="." instance=ExtResource("4_4nveo")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.12094, 1.43338, 0.85309)
@@ -52,3 +53,8 @@ environment = SubResource("Environment_j8ngf")
 
 [node name="Light" parent="." instance=ExtResource("6_lomaa")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.232579, 11.8639, 0.0558943)
+
+[node name="L1" type="Node" parent="."]
+
+[node name="L1_Ground" parent="." instance=ExtResource("8_q11rl")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.0260878, 1.90735e-06, 29.8293)
